@@ -4,6 +4,12 @@
       3) Display the results in the appropriate element
 */
 function recArea(){
+      let len= parseFloat(document.getElementById("id").value);
+      let wid= parseFloat(document.getElementById("W").value);
+      let op= parseFloat(document.getElementById("output").value);    
+      let  A= parseFloat(document.getElementById("len*Wid").value);
+      op.inner.HTMAL = A;
+                     ="area="+A;          
 
 }
 
@@ -20,7 +26,12 @@ function recPerimeter(){
 let pi = 3.1415926;
 
 function cirArea(){
-
+      let len= parseFloat(document.getElementById("id").value);
+      let wid= parseFloat(document.getElementById("W").value);
+      let op= parseFloat(document.getElementById("output").value);    
+      let  A= parseFloat(document.getElementById("len*Wid").value);
+      op.inner.HTMAL = A;
+                     ="area="+A;          
 }
 
 function cirPerimeter(){
