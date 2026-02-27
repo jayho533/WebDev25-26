@@ -10,14 +10,9 @@
         alert("Please enter valid weight and height values.");
         return;
     }
-        
 
 
-
-
-  
-
-      
+ 
 /* 
 Guideline:
 1) Create the function
