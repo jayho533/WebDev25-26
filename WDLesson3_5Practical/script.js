@@ -9,7 +9,7 @@ function recArea(){
       let op= parseFloat(document.getElementById("output").value);    
       let  A= parseFloat(document.getElementById("len*Wid").value);
       op.inner.HTMAL = A;
-                     ="area="+A;          
+                     "area="+A;          
 
 }
 
@@ -31,7 +31,7 @@ function cirArea(){
       let op= parseFloat(document.getElementById("output").value);    
       let  A= parseFloat(document.getElementById("len*Wid").value);
       op.inner.HTMAL = A;
-                     ="area="+A;          
+                     "area="+A;          
 }
 
 function cirPerimeter(){
