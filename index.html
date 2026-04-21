@@ -3,44 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>WD Lesson 6.3 Practical</title>
+    <title>WD_6.4 Prac Soln</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="script.js"></script>
    </head>
-  <body>
+
+  <body onload="init()">
     <div id="banner" class="container center">
-      <h1> Jays store </h1>
-      <!-- Challenge 1: Give your store a new name (replace content of h1 above)-->
+      <div style="text-align:center">
+          <h1> FBI's Most Wanted</h1>
+      </div>
     </div>
-
     <div class="container subbanner">
+      
       <div>
-        <p><!-- Challenge 2: Welcome the customer to your store. Tell them why your store is the BEST! Think of it as a commercial -->
-          welcome to my store 
-        </p>
-       </div>
+        <p>This practical challenges students to retrieve information from the Internet and generate HTML for that information.<br>Students review traversing information in an array, extracting information contained in the array, and generating HTML by string interpolating the information into a card template.</p>
+        <a class="button" target="_blank" href="https://raw.githubusercontent.com/rcastro2/WebDevelopment/refs/heads/main/data/fbi.json">Raw Data</a>
+        <a class="button" target="_blank" href="https://jsoneditoronline.org/">JSON Editor Online</a>
+       </div>       
     </div>
 
-    <!-- Links to display eventHandlers that display Meats, Seafood and Desserts.  
-     Look at script.js for the names of the event handlers. 
-     Meats is provided below as an example. -->
-    <nav class="container">
-      <a onclick="showMeats()"> Meats </a>
-      <!-- Challenge 3: Add 2 more links - one for Seafood and the other for Desserts -->
-      <a onclick="showSeafood()"> seafood </a>
-      <a onclick="showDesserts()"> Desserts </a>
-    </nav>
-
-    <div class="container food_titles center">
-      <!-- title -->
-      <h1 id="title">Item Title</h1>
-    </div>
-
-    <!-- output -->
-    <div class="container" id="output"></div>
+    <div id="output" class="container"></div>
 
     <div id="footer" class="container center">
-      <h3>Lesson 6.3 Practical</h3>
+      <h3>Lesson 6.4 Practical</h3>
     </div>  
   </body>
 </html>
