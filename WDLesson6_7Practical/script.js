@@ -51,7 +51,7 @@ function filterByBorough(){
       ct += 1;
     }
   }
-  result.innerHTML = `${ct} Results found.`
+  result.innerHTML = `${ct} Results found`;
   output.innerHTML = build;
 }
 
@@ -72,7 +72,7 @@ function filterByzip(){
     ct++;
    }
   }
-  result.innerHTML =`${ct} Results found.`
+  result.innerHTML =`${ct} Results found`;
   output.innerHTML = build;
 }
 
