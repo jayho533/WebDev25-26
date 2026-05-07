@@ -56,14 +56,13 @@ function lottery(count){
 }
 
 //Challenge 9: Create a function results() that accepts an array of "Y" or "N" responses and returns the number of "Y" responses.
-function results(responses){
-  let countY = 0;
-  for (let i = 0; i < responses.length; i ++){
-    if(responses {i} === "Y"){
-      countY++;
+function results(myArray){
+  let Ycount = 0;
+  for (let i=0; i < myArray.length; i+=1){
+    let response = myArray[i];
+    if (response =="Y"){
+      Ycount +=1;
     }
   }
-  return count Y;
+  return Ycount;
 }
-let surverData = {"Y", "N", "Y", "Y", "N"};
-display(results(surveyData));
