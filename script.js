@@ -1,39 +1,45 @@
-function init(){
-  //For all challenges use the function display( ) in order to output the results to the console and the webpage. 
-  // The example below calls the function randint() and displays the value returned by it in the console and page.
-  let secret = randint(1,10);
-  display(`secret # is ${secret}`);
-  
-  //Challenge 1: Use the function area( ) created in helper.js to display the area of any rectangle of your choice of dimensions.
-   let A = area(2,3.5);
-   display(`Area of rectangle is + ${A}`);
+//Data Source: https://data.cityofnewyork.us/City-Government/Open-Parking-and-Camera-Violations/nc67-uf89
 
-  //Challenge 2: Use the function celsius( ) created in helper.js to show the Celsius equivalent of any Fahrenheit temperature. 
-    let C = cesius(98.6);
-    display(`$ {c} deg Celsius`)
+let data, info, output, result; // global variables
 
-  //Challenge 4: Set height and weight to appropriate numbers. Pass the variables as arguments to the bmi() function defined in Challenge 3.
-  // Store the result in a variable called b. Display the value of b.
-  let height=70;
-  let weight= 160;
-  let b = bmi(height, weight);
-  display(`Acroding to the ${hegiht} & ${weight} the bmi is${b}`);
+async function init(){  
+  let link = "data.js"; //let link = "https://data.cityofnewyork.us/resource/nc67-uf89.json?$limit=1000";
+  info = await fetch(link);
+  data = await info.json();
 
-  //Challenge 6:  Pass the value b from challenge 4 to the bmiCategory() function and store in a variable bc.  Display the BMI category returned by bmiCategory().
-   let bc = bmiCategory(b);
-   display(`${bc}`);
+  output = get("output");
+  result = get("result");
+  let build = "";
+  let ct = 0;
 
-  
-  //Challenge 8: Call lottery() with some number and display the results.
-  let myTicket = lottery(6);
-  display(`${myTicket}`);
+  //Challenge 2: Test the function card() developed in Challenge 1 by displaying only the first violation to the webpage.
+  // let firstViolation = data[0];
+  // build += card(firstviolation);
 
-
-  //Challengen 10: Create an array survey which contains several "Y" and "N" items. Pass this survey array to the function results( ) and display the value returned.
-  let survey_results = ["Y","N","N","N","N","Y","N","Y","N","Y","Y","N"];
-  display(`<h4>Challenge 10:</h4> 
-              # of Y responses: ${results(survey_results)}`);
+  //Challenge 3: Display all the violations to the web page using the function card().
+  for(let i = 0; i < data.length; i++){
+    let violation = data[i];
+    build += card(violation);
+    ct++;
+  }
+ 
+  result.innerHTML = `${ct} Results found`;
+  output.innerHTML = build;  
 }
-  
 
-
+// Challenge 4: Create a function to filter the information and display only the cards that satisfy specfic condition(s).
+function filterByLicenceType(){
+  let type = get("lic_type").value;
+  output = get("output");
+  result = get("result");
+  let build = "";
+  let ct = 0;
+}
+  for(let i = 0; i < data.length; i++){
+    let violation = data[i];
+    build += card(violation);
+    ct++;
+  }
+ 
+  result.innerHTML = `${ct} Results found`;
+  output.innerHTML = build;  
