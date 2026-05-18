@@ -29,7 +29,7 @@ function card( info ){
    let build = `<div class="card fitted">
                   <h3>${info.vehicle_type_code1}</h3>
                   <hr>
-                  <p>Location: ${info.collision_id}</p>
+                  <p> ${info.collision_id}</p>
                   <h5>${info.borough}</h5>`;
                   if(info.latitude && info.longitude){
                     build += `<input type="button" value="Map" onclick="showMap( ${info.latitude}, ${info.longitude} )">`;
